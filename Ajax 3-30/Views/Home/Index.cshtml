@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="row jumbotron">
+    <div class="col-md-3">
+        <input type="text" id="first-name" placeholder="First Name" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <input type="text" id="last-name" placeholder="Last Name" class="form-control" />
+    </div>
+    <div class="col-md-3">
+        <input type="text" id="age" placeholder="Age" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <button class="btn btn-primary btn-block" id="add-person">Add Person</button>
+    </div>
+</div>
+
+<div class="row">
+    <table id="people-table" class="table table-hover table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="first-name" id="fname" placeholder="First Name" />
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <input type="text" class="last-name" id="lname" placeholder="Last Name" />
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <input type="text" class="age" id="a" placeholder="Age" />
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <input type="hidden" class="id" id="id" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="save-button">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="/js/People.js"></script>
+}
